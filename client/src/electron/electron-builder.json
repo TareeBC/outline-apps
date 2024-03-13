@@ -1,0 +1,33 @@
+{
+  "files": ["client/build/electron", "client/www", "client/resources/tray", "!node_modules/electron"],
+  "asarUnpack": ["third_party", "client/tools"],
+  "artifactName": "Outline-Client.${ext}",
+  "directories": {
+    "output": "client/output/dist"
+  },
+  "linux": {
+    "target": {
+      "target": "AppImage",
+      "arch": ["x64"]
+    },
+    "files": ["output/icons/png", "output/build/linux", "tools/outline_proxy_controller/dist"],
+    "icon": "build/icons/png",
+    "category": "Network"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": "ia32"
+      }
+    ],
+    "files": ["output/build/windows"],
+    "icon": "output/icons/win/icon.ico",
+    "sign": "client/src/electron/windows/electron_builder_signing_plugin.cjs",
+    "signingHashAlgorithms": ["sha256"]
+  },
+  "nsis": {
+    "perMachine": true,
+    "include": "client/src/electron/custom_install_steps.nsh"
+  }
+}
