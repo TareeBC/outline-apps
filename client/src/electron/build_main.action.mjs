@@ -22,7 +22,7 @@ import path from 'path';
 import url from 'url';
 import {getRootDir} from '../build/get_root_dir.mjs';
 
-const ELECTRON_BUILD_DIR = 'build';
+const ELECTRON_BUILD_DIR = 'output';
 const ELECTRON_PLATFORMS = ['linux', 'windows'];
 
 export async function main(...parameters) {

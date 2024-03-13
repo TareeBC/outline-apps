@@ -143,5 +143,6 @@
       "ios",
       "osx"
     ]
-  }
+  },
+  "main": "output/electron/index.js"
 }

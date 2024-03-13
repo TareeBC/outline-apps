@@ -15,10 +15,12 @@
   "engines": {
     "node": "18.x.x"
   },
-  "main": "client/build/electron/electron/index.js",
   "private": true,
   "workspaces": [
     "server_manager",
     "client"
-  ]
+  ],
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
+  }
 }
